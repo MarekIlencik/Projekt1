@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+ <div>
+   <p>publikováno: {{ post.published_date }}</p>
+   <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">edit<span
+class="glyphicon glyphicon-pencil"></span></a>
+   <h1>{{ post.title }}</h1>
+   <p>{{ post.text|linebreaksbr }}</p>
+   </div>
+{% endblock %}
